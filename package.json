@@ -2,12 +2,9 @@
   "name": "herolo-cinema",
   "version": "0.0.1",
   "private": true,
-  "devDependencies": {
-    "react-scripts": "2.0.5"
-  },
   "dependencies": {
+    "react-scripts": "2.0.5",
     "axios": "^0.18.0",
-    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
