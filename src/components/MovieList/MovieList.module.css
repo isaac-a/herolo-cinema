@@ -1,0 +1,40 @@
+.MovieList {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+  list-style: none;
+  padding: 1.5em;
+  margin: 0;
+}
+
+.AddMovie {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  z-index: 5;
+  background: #2eb8c2;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 1px 1px 6px #555;
+  padding: 1em;
+  outline: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.AddMovie:hover {
+  background: #2caab3;
+}
+
+.AddMovie i {
+  color: white;
+  font-size: 3em;
+}
+
+.Error {
+  margin-top: 4em;
+  text-align: center;
+  color: #24838a;
+  text-shadow: 1px 1px 1px #555;
+}

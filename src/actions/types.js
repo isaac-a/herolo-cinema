@@ -1,0 +1,8 @@
+export const SET_LOADING = 'SET_LOADING';
+export const SET_MOVIES = 'SET_MOVIES';
+export const SET_MOVIE_TO_EDIT = 'SET_MOVIE_TO_EDIT';
+export const SAVE_EDITED_MOVIE = 'SAVE_EDITED_MOVIE';
+export const SAVE_NEW_MOVIE = 'SAVE_NEW_MOVIE';
+export const SET_MOVIE_TO_DELETE = 'SET_MOVIE_TO_DELETE';
+export const DELETE_MOVIE = 'DELETE_MOVIE';
+export const ERROR_LOADING = 'ERROR_LOADING';

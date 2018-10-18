@@ -1,0 +1,20 @@
+.Header h1 {
+  color: #3eb5c5;
+  font-family: Arvo;
+  font-weight: bold;
+  text-shadow: -3px -3px 0 #444, 3px -3px 0 #444, -3px 3px 0 #444,
+    3px 3px 0 #444, 4px 4px 0 #444, 5px 5px 0 #444, 6px 6px 0 #444,
+    7px 7px 0 #444;
+  letter-spacing: 0.05em;
+  text-align: center;
+  font-size: 4em;
+  margin: 0;
+  padding: 0.7em 0.5em 0.5em;
+}
+
+@media (max-width: 560px) {
+  .Header h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+  }
+}

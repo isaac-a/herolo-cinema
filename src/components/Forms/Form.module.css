@@ -1,0 +1,61 @@
+.MovieForm {
+  padding: 1em;
+}
+
+.MovieForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.MovieForm h2 {
+  color: #208188;
+  text-align: center;
+}
+
+.MovieForm label {
+  font-weight: bold;
+  margin-bottom: 0.8em;
+}
+
+.MovieForm input {
+  font-size: 1em;
+  outline: none;
+  padding-bottom: 0.3em;
+  border: none;
+  border-bottom: 1px solid #208188;
+  margin-bottom: 1.5em;
+}
+
+.MovieForm button {
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  padding: 0.5em 0.8em;
+  border: none;
+  border-radius: 5px;
+  margin-top: 0.5em;
+  cursor: pointer;
+  outline: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.MovieForm button:hover {
+  transform: scale(1.05);
+}
+
+.Save {
+  margin-right: 1em;
+  background: #32cad4;
+}
+
+.Cancel {
+  background: #c03168;
+}
+
+.Save:hover {
+  background: #27a0a8;
+}
+
+.Cancel:hover {
+  background: #a12957;
+}

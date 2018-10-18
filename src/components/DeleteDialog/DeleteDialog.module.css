@@ -1,0 +1,46 @@
+.DeleteDialog {
+  padding: 1em;
+}
+
+.DeleteDialog h3 {
+  color: #208188;
+  text-align: center;
+}
+
+.DeleteDialog div {
+  text-align: center;
+}
+
+.DeleteDialog button {
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  padding: 0.5em 0.8em;
+  border: none;
+  border-radius: 5px;
+  margin-top: 0.5em;
+  cursor: pointer;
+  outline: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.DeleteDialog button:hover {
+  transform: scale(1.05);
+}
+
+.Yes {
+  margin-right: 1em;
+  background: #32cad4;
+}
+
+.No {
+  background: #c03168;
+}
+
+.Yes:hover {
+  background: #27a0a8;
+}
+
+.No:hover {
+  background: #a12957;
+}
