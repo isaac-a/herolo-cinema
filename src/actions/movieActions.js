@@ -90,14 +90,14 @@ export const setMovieToEdit = movie => {
 export const saveNewMovie = movie => {
   return {
     type: SAVE_NEW_MOVIE,
-    payload: { ...movie, id: uuidv4() }
+    payload: { ...movie, id: uuidv4(), title: formatTitle(movie.title) }
   };
 };
 
 export const saveEditedMovie = movie => {
   return {
     type: SAVE_EDITED_MOVIE,
-    payload: movie
+    payload: { ...movie, title: formatTitle(movie.title) }
   };
 };
 

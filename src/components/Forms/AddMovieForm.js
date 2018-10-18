@@ -21,6 +21,13 @@ class AddMovieForm extends Component {
   };
 
   onSaveMovieHandler = () => {
+    const sameTitle = this.props.movies.find(
+      movie => movie.title.toUpperCase() === this.state.title.toUpperCase()
+    );
+    if (sameTitle) {
+      this.setState({ errors: { title: 'This title already exists' } });
+      return;
+    }
     if (validateForm.call(this, this.state)) {
       this.props.saveNewMovie(this.state);
       this.props.closeModal();

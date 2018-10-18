@@ -1,12 +1,12 @@
 .Modal {
-  position: fixed;
+  position: absolute;
   z-index: 3;
   background-color: white;
-  width: 70%;
+  width: 85%;
   box-shadow: 2px 2px 5px black;
   padding: 1em;
-  left: 15%;
-  top: 20%;
+  left: 7.5%;
+  top: 15%;
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
   border-radius: 8px;

@@ -7,14 +7,6 @@ export const formatTitle = title => {
 };
 
 export function validateForm(fields) {
-  const sameTitle = this.props.movies.find(
-    movie => movie.title.toUpperCase() === fields.title.toUpperCase()
-  );
-
-  if (sameTitle) {
-    this.setState({ errors: { title: 'This title already exists' } });
-    return;
-  }
   if (!fields.title) {
     this.setState({ errors: { title: 'Title field is required' } });
     return;
