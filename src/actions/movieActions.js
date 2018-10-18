@@ -22,7 +22,7 @@ export const fetchMovies = () => dispatch => {
   dispatch(setLoading(true));
   axios
     .get(
-      'imdb/top?start=10&end=20&token=4de4e181-aa61-4b31-8e8f-1f04df973fed&format=json&data=1'
+      'http://api.myapifilms.com/imdb/top?start=10&end=20&token=4de4e181-aa61-4b31-8e8f-1f04df973fed&format=json&data=1'
     )
     .then(res => {
       dispatch(setLoading(false));
