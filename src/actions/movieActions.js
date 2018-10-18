@@ -19,22 +19,58 @@ export const setLoading = bool => ({
 });
 
 export const fetchMovies = () => dispatch => {
-  dispatch(setLoading(true));
+  const loadedMovies = [];
   axios
-    .get(
-      'http://api.myapifilms.com/imdb/top?start=10&end=20&token=4de4e181-aa61-4b31-8e8f-1f04df973fed&format=json&data=1'
+    .all([
+      axios.get(
+        'https://www.omdbapi.com/?t=fight+club&y=1999&apikey=e2803df6'
+      ),
+      axios.get(
+        'https://www.omdbapi.com/?t=the+godfather&y=1972&apikey=e2803df6'
+      ),
+      axios.get(
+        'https://www.omdbapi.com/?t=pulp+fiction&y=1994&apikey=e2803df6'
+      ),
+      axios.get(
+        'https://www.omdbapi.com/?t=the+dark+knight&y=2008&apikey=e2803df6'
+      ),
+      axios.get(
+        'https://www.omdbapi.com/?t=forrest+gump&y=1994&apikey=e2803df6'
+      ),
+      axios.get(
+        'https://www.omdbapi.com/?t=inception&y=2010&apikey=e2803df6'
+      )
+    ])
+    .then(
+      axios.spread((movie1, movie2, movie3, movie4, movie5, movie6) => {
+        dispatch(setLoading(false));
+        dispatch({ type: ERROR_LOADING, payload: null });
+        loadedMovies.push(
+          movie1.data,
+          movie2.data,
+          movie3.data,
+          movie4.data,
+          movie5.data,
+          movie6.data
+        );
+
+        const formattedMovies = loadedMovies.map(movie => {
+          return {
+            id: uuidv4(),
+            title: formatTitle(movie.Title),
+            year: movie.Year,
+            runtime: movie.Runtime,
+            genre: movie.Genre,
+            director: movie.Director
+          };
+        });
+        console.log(formattedMovies);
+        dispatch({
+          type: SET_MOVIES,
+          payload: formattedMovies
+        });
+      })
     )
-    .then(res => {
-      dispatch(setLoading(false));
-      dispatch({ type: ERROR_LOADING, payload: null });
-      const movies = res.data.data.movies.map(movie => {
-        return { ...movie, id: uuidv4(), title: formatTitle(movie.title) };
-      });
-      dispatch({
-        type: SET_MOVIES,
-        payload: movies
-      });
-    })
     .catch(err => {
       dispatch(setLoading(false));
       dispatch({

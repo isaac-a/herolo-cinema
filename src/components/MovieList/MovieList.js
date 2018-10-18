@@ -71,8 +71,8 @@ class MovieList extends Component {
         title={movie.title}
         year={movie.year}
         runtime={movie.runtime}
-        genre={movie.genre || movie.genres.join(', ')}
-        director={movie.director || movie.directors[0].name}
+        genre={movie.genre}
+        director={movie.director}
         editMovie={this.editMovieHandler}
         setMovieToDelete={this.props.setMovieToDelete}
         openFormModal={this.openFormModal}
