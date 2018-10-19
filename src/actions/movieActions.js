@@ -64,7 +64,6 @@ export const fetchMovies = () => dispatch => {
             director: movie.Director
           };
         });
-        console.log(formattedMovies);
         dispatch({
           type: SET_MOVIES,
           payload: formattedMovies
