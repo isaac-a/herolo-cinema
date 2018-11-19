@@ -4,7 +4,7 @@ import classes from './Header.module.css';
 
 const Header = () => (
   <header className={classes.Header}>
-    <h1>Herolo Cinema</h1>
+    <h1>OMDB Cinema</h1>
   </header>
 );
 
